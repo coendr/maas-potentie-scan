@@ -1,0 +1,218 @@
+html{
+  overflow: auto;
+}
+
+body {
+  font-family: "Sergoe UI, Roboto, Arial", sans-serif;
+  font-weight: 400 !important;
+}
+
+.hidden{
+  display: none;
+}
+
+.pointer{
+  cursor: pointer;
+  &::selection {
+    background: unset;
+    color: unset;
+  }
+}
+.rotate{
+  transform: rotate(90deg);
+}
+
+.ol-scale-line {
+  display: none;
+}
+
+.btn,
+.v-btn {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.v-btn {
+  height: auto;
+}
+.tooltip{
+  z-index: 9999;
+}
+.v-tooltip__content{
+  z-index: 9999;
+  max-width: 300px
+}
+
+.btn {
+  &:hover {
+    color: white;
+    background-color: $light-blue !important;
+  }
+}
+
+.btn-primary {
+  background-color: $light-blue!important;
+  color: $white !important;
+  border: 1px solid black;
+
+  &:hover {
+    color: white;
+    background-color: $light-blue !important;
+  }
+}
+
+.btn-secondary {
+  background: $darkcyan;
+  color: $white;
+
+}
+
+.btn-tertiary {
+  background: $pink;
+  color: $white;
+  width: 15rem;
+  padding: 5px 0;
+}
+
+.top-cut{
+  border-radius: 10px 10px 0 0;
+}
+
+.bottom-cut{
+  border-radius:  0 0 10px 10px;
+}
+.v-text-field__suffix {
+  white-space: nowrap;
+  padding: 6px 0 6px 6px;
+  max-height: 32px;
+  line-height: 20px;
+  align-self: unset;
+}
+
+.v-input__control,
+.v-text-field,
+.v-text-field--box .v-input__slot,
+.v-text-field__slot {
+  min-height: auto !important;
+  height: 40px !important;
+  width: 180px;
+
+  input {
+    margin-top: 0;
+  }
+}
+
+.v-input__slot {
+  border-radius: 10px;
+}
+
+.v-dialog:not(.v-dialog--fullscreen) {
+  max-height: 95%;
+  width: 55% !important;
+  overflow-x: hidden !important;
+
+  .close {
+    right: 0;
+    margin-top: 10px;
+  }
+}
+
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 280px;
+  z-index: 2;
+  .h5{
+    font-size: 20px;
+    font-weight: bold;
+    display:block;
+    margin-bottom: 0;
+  }
+  .small{
+    font-size: 12px;
+    vertical-align: top;
+  }
+
+  .h6{
+    font-weight: 400;
+  }
+
+  .value{
+    color: $pink;
+  }
+
+  &::after,
+  &::before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &::after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+  }
+
+  &::before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+  }
+
+  .ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    z-index: 9999;
+
+    &::after {
+      
+    }
+  }
+}
+
+.sidebar{
+  top: 35px;
+}
+.menu{
+  height: 35px !important;
+  float: left;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  margin: 0;
+  > div{
+    padding: 0;
+    > a > button, .btn-group{
+      width: 50%;
+      .dropdown-toggle{
+        width: 100%;
+      }
+    }
+    > a > button, .dropdown-toggle{
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+  }
+  .dropdown-menu{
+    width: 100%;
+  }
+}

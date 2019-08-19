@@ -1,0 +1,70 @@
+.modalsplit {
+  height: $full-height;
+  overflow: hidden;
+
+  #content{
+    border-left: 1px solid lightgray ;
+    min-height: $full-height;
+    position: relative;
+    overflow: auto;
+    height: 100vh;
+  }
+
+  .pieChart {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .row {
+    margin: 0 !important;
+  }
+
+  svg > g > g:last-child {
+    pointer-events: none
+  }
+
+  p {
+    height: auto;
+    min-height: 180px;
+    max-height: 180px;
+    overflow: auto;
+    display: block;
+    position: relative;
+  }
+
+
+  #control {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: $full-height;
+    padding: 0 25px 25vh;
+
+    button{
+      width: 20.5rem;
+      padding: 10px 0;
+      color:white;
+      margin: 0 auto 3px;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+      overflow: auto;
+      #content{
+        border-left: none;
+        min-height: auto;
+        height: auto;
+        overflow: hidden;
+
+      }
+
+      #control{
+        position: relative;
+      }
+
+  }
+}
+
+
+
+
